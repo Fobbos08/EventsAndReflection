@@ -30,7 +30,7 @@ namespace EventsAndReflection
                 {
                     GenerateEvent(currentDirectory);
                 }
-
+                if (files.Length > 5) throw new MaxFilesCountException(5);
                 foreach (var file in files)
                 {
                     processFileName(currentDirectory, file);
@@ -43,6 +43,10 @@ namespace EventsAndReflection
                         CheckFiles(directory, processFileName);
                     }
                 }
+            }
+            catch (MaxFilesCountException me)
+            {
+                Console.WriteLine(me);
             }
             catch (Exception e)
             {

@@ -47,6 +47,7 @@
     <Compile Include="FilesProvider.cs" />
     <Compile Include="IFileProvider.cs" />
     <Compile Include="IPluginsReader.cs" />
+    <Compile Include="MaxFilesCountException.cs" />
     <Compile Include="PluginsReader.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
